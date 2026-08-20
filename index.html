@@ -1,288 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Handwriting Work | New Joining</title>
+<title>Handwriting Work | New Joining</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f8ff;
-      color: #172033;
-      line-height: 1.6;
-    }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f8ff;
+  color:#172033;
+}
 
-    .hero {
-      background: linear-gradient(135deg, #071a3d, #0d5bd7);
-      color: white;
-      padding: 55px 20px 85px;
-      text-align: center;
-      border-radius: 0 0 35px 35px;
-    }
+.hero{
+  background:linear-gradient(135deg,#071a3d,#0d5bd7);
+  color:white;
+  text-align:center;
+  padding:45px 20px 90px;
+  border-radius:0 0 35px 35px;
+}
 
-    .logo {
-      width: 115px;
-      height: 115px;
-      object-fit: cover;
-      border-radius: 50%;
-      background: white;
-      padding: 5px;
-      border: 4px solid rgba(255,255,255,0.8);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-      margin-bottom: 20px;
-    }
+.badge{
+  display:inline-block;
+  padding:8px 18px;
+  border-radius:30px;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.3);
+  font-size:15px;
+  margin-bottom:18px;
+}
 
-    .badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 7px 16px;
-      border-radius: 30px;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
+.hero h1{
+  font-size:36px;
+  margin-bottom:15px;
+}
 
-    h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
+.hero p{
+  max-width:600px;
+  margin:auto;
+  font-size:18px;
+  line-height:1.7;
+}
 
-    .hero p {
-      max-width: 600px;
-      margin: auto;
-      opacity: 0.92;
-      font-size: 17px;
-    }
+.main{
+  max-width:850px;
+  margin:-50px auto 40px;
+  padding:0 18px;
+  position:relative;
+}
 
-    .main {
-      max-width: 850px;
-      margin: -45px auto 40px;
-      padding: 0 18px;
-      position: relative;
-    }
+.card{
+  background:white;
+  border-radius:25px;
+  padding:32px 24px;
+  box-shadow:0 12px 35px rgba(30,60,100,.12);
+}
 
-    .card {
-      background: white;
-      border-radius: 24px;
-      padding: 30px 24px;
-      box-shadow: 0 12px 35px rgba(30,60,100,0.12);
-      margin-bottom: 20px;
-    }
+.card h2{
+  text-align:center;
+  font-size:25px;
+  margin-bottom:12px;
+}
 
-    .card h2 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+.intro{
+  text-align:center;
+  color:#687386;
+  font-size:16px;
+  margin-bottom:25px;
+}
 
-    .intro {
-      text-align: center;
-      color: #667085;
-      margin-bottom: 25px;
-    }
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
+.feature{
+  background:#f6f8fc;
+  border-radius:18px;
+  padding:22px 12px;
+  text-align:center;
+}
 
-    .feature {
-      background: #f6f8fc;
-      border-radius: 17px;
-      padding: 20px 10px;
-      text-align: center;
-    }
+.feature .icon{
+  font-size:32px;
+  margin-bottom:8px;
+}
 
-    .feature .icon {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
+.feature h3{
+  font-size:16px;
+  margin-bottom:5px;
+}
 
-    .feature h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
+.feature p{
+  font-size:13px;
+  color:#737b8c;
+}
 
-    .feature p {
-      font-size: 13px;
-      color: #737b8c;
-    }
+.telegram-section{
+  margin-top:28px;
+}
 
-    .telegram-section {
-      margin-top: 25px;
-    }
+.telegram-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  padding:17px;
+  margin:13px 0;
+  border-radius:15px;
+  color:white;
+  text-decoration:none;
+  font-size:17px;
+  font-weight:bold;
+  background:linear-gradient(135deg,#229ed9,#147fc1);
+  box-shadow:0 7px 18px rgba(34,158,217,.25);
+}
 
-    .telegram-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 17px;
-      margin: 12px 0;
-      border-radius: 14px;
-      color: white;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: bold;
-      background: linear-gradient(135deg, #229ed9, #147fc1);
-      box-shadow: 0 7px 18px rgba(34,158,217,0.25);
-      transition: 0.2s;
-    }
+.telegram-btn.secondary{
+  background:linear-gradient(135deg,#1677c8,#0759a5);
+}
 
-    .telegram-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(34,158,217,0.35);
-    }
+.telegram-btn.dark{
+  background:linear-gradient(135deg,#172b4d,#243f68);
+}
 
-    .telegram-btn.secondary {
-      background: linear-gradient(135deg, #1677c8, #0759a5);
-    }
+.notice{
+  background:#fff8e6;
+  border:1px solid #ffe2a6;
+  color:#795900;
+  padding:15px;
+  border-radius:14px;
+  font-size:13px;
+  margin-top:22px;
+  text-align:center;
+}
 
-    .telegram-btn.dark {
-      background: linear-gradient(135deg, #172b4d, #243f68);
-    }
+footer{
+  text-align:center;
+  color:#8a93a3;
+  font-size:13px;
+  padding:0 20px 30px;
+}
 
-    .notice {
-      background: #fff8e6;
-      border: 1px solid #ffe2a6;
-      color: #795900;
-      padding: 15px;
-      border-radius: 14px;
-      font-size: 13px;
-      margin-top: 20px;
-      text-align: center;
-    }
+@media(max-width:600px){
+  .hero h1{
+    font-size:30px;
+  }
 
-    footer {
-      text-align: center;
-      color: #8a93a3;
-      font-size: 13px;
-      padding: 10px 20px 30px;
-    }
+  .hero p{
+    font-size:17px;
+  }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 28px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 40px;
-      }
-    }
-  </style>
+  .features{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
+<section class="hero">
 
-    <!-- GitHub repository me logo.jpg upload karein -->
-    
+  <div class="badge">📝 Handwriting Work</div>
 
-    <div class="badge">📝 Handwriting Work</div>
+  <h1>New Joining Open</h1>
 
-    <h1>New Joining Open</h1>
+  <p>
+    Handwriting work ke liye joining information
+    aur complete details Telegram par prapt karein.
+  </p>
 
-    <p>
-      Handwriting work ke liye joining information aur complete
-      details Telegram par prapt karein.
-    </p>
+</section>
 
-  </section>
+<main class="main">
 
+<div class="card">
 
-  <main class="main">
+  <h2>✨ Work Information</h2>
 
-    <!-- ABOUT -->
-    <div class="card">
+  <p class="intro">
+    Joining se pehle work details, requirements aur
+    process ki information check karein.
+  </p>
 
-      <h2>✨ Work Information</h2>
+  <div class="features">
 
-      <p class="intro">
-        Joining se pehle work details, requirements aur process
-        ki information check karein.
-      </p>
-
-      <div class="features">
-
-        <div class="feature">
-          <div class="icon">📝</div>
-          <h3>Handwriting Work</h3>
-          <p>Work related information</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon">📋</div>
-          <h3>Joining Details</h3>
-          <p>Process aur requirements</p>
-        </div>
-
-        <div class="feature">
-          <div class="icon">💬</div>
-          <h3>Telegram Support</h3>
-          <p>Direct communication</p>
-        </div>
-
-      </div>
-
-
-      <!-- TELEGRAM BUTTONS -->
-      <div class="telegram-section">
-
-        <a
-          href="https://t.me/Nitin_Kumar_Singh_018?text=New%20Joining%20%F0%9F%93%9D"
-          class="telegram-btn"
-          target="_blank"
-          rel="noopener noreferrer">
-          ✈️ New Joining 📝
-        </a>
-
-        <a
-          href="https://t.me/Nitin_Kumar_Singh_018?text=Handwriting%20Work%20Details%20%F0%9F%93%9A"
-          class="telegram-btn secondary"
-          target="_blank"
-          rel="noopener noreferrer">
-          📚 Get Work Details
-        </a>
-
-        <a
-          href="https://t.me/Nitin_Kumar_Singh_018?text=I%20want%20to%20apply%20for%20Handwriting%20Work%20%F0%9F%99%8B"
-          class="telegram-btn dark"
-          target="_blank"
-          rel="noopener noreferrer">
-          🚀 Apply for Handwriting Work
-        </a>
-
-      </div>
-
-      <div class="notice">
-        ℹ️ Joining se pehle work ki complete terms, requirements
-        aur payment conditions ko carefully verify karein.
-      </div>
-
+    <div class="feature">
+      <div class="icon">📝</div>
+      <h3>Handwriting Work</h3>
+      <p>Work related information</p>
     </div>
 
-  </main>
+    <div class="feature">
+      <div class="icon">📋</div>
+      <h3>Joining Details</h3>
+      <p>Process aur requirements</p>
+    </div>
 
+    <div class="feature">
+      <div class="icon">💬</div>
+      <h3>Telegram Support</h3>
+      <p>Direct communication</p>
+    </div>
 
-  <footer>
-    © 2026 Handwriting Work • All Rights Reserved
-  </footer>
+  </div>
+
+  <div class="telegram-section">
+
+    <a href="https://t.me/Nitin_Kumar_Singh_018?text=New%20Joining%20%F0%9F%93%9D"
+       class="telegram-btn"
+       target="_blank">
+      ✈️ New Joining 📝
+    </a>
+
+    <a href="https://t.me/Nitin_Kumar_Singh_018?text=Handwriting%20Work%20Details%20%F0%9F%93%9A"
+       class="telegram-btn secondary"
+       target="_blank">
+      📚 Get Work Details
+    </a>
+
+    <a href="https://t.me/Nitin_Kumar_Singh_018?text=I%20want%20to%20apply%20for%20Handwriting%20Work%20%F0%9F%99%8B"
+       class="telegram-btn dark"
+       target="_blank">
+      🚀 Apply for Handwriting Work
+    </a>
+
+  </div>
+
+  <div class="notice">
+    ℹ️ Joining se pehle work ki complete terms,
+    requirements aur payment conditions ko carefully verify karein.
+  </div>
+
+</div>
+
+</main>
+
+<footer>
+  © 2026 Handwriting Work • All Rights Reserved
+</footer>
 
 </body>
-</html>
+  </html>
